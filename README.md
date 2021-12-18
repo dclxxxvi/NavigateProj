@@ -1,1 +1,3 @@
-# NavigateProj
+# NavigateProject
+
+скопировать описание из старого репозитория

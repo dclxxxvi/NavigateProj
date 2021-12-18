@@ -1,0 +1,63 @@
+.level_item {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center; 
+	flex-basis: 32%;
+	height: 150px;
+	width: 100%;
+	color: #1A3F83;
+	background-color: #c4c4c4c2;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+	-webkit-transition: color .3s, background-color .3s, background-size .3s, -webkit-transform .3s;
+    transition: color .3s, background-color .3s, background-size .3s, transform .3s;
+}
+
+.level_item input[type=radio] {
+	display: none;
+}
+
+.level_item label {
+	height: 150px;
+	width: 100%;
+	cursor: pointer;
+	user-select: none;
+}
+
+.level_item .btn_text {
+	width: 100%;
+	font-size: 24px;
+	text-align: center;
+	background-color: inherit;
+}
+ 
+.level_item:hover {
+	color: #ffffff;
+	background-color: #1A3F83;
+	background-size: 105%;
+	transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear; ;
+}
+
+.level_item input[type='radio']:checked + div {
+	color: #ffffff;
+	background-color: #1A3F83;
+}
+
+.bakalavriat_btn
+{
+	background-image: url(../images/bakalavriat.png);
+}
+
+.magistratura_btn
+{
+	background-image: url(../images/magistratura.png);
+}
+
+.aspirantura_btn
+{
+	background-image: url(../images/aspirantura.png);
+}

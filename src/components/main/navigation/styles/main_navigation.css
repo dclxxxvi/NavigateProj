@@ -1,0 +1,51 @@
+.main_nav
+{
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.institutes_nav
+{
+	padding: 0;
+	margin: 0;
+	flex-basis: 20%;
+}
+
+.videos_nav
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	flex-basis: 75%;
+}
+
+h1
+{
+	padding: 0;
+	margin: 0;
+	height: 40px; 
+	font-size: auto;
+	color: #000000;
+	background-color: #FFCF00;
+	font-family: 'Arial';
+	font-weight: 600;
+	font-size: 26px;
+	text-align: center;
+}
+
+h2
+{
+	padding: 4px;
+	margin: 0;
+	font-size: auto;
+	color: #000000;
+	background-color: #FFCF00;
+	font-family: 'Arial';
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+}

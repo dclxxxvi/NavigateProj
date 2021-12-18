@@ -1,0 +1,9 @@
+.video_element
+{
+	min-width: 250px;
+	width: calc((100% / 3) - 12px);
+	height: auto;
+	margin: 6px;
+	display: flex;
+	border-radius: 5px;
+}
