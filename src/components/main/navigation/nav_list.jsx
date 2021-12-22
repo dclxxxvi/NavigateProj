@@ -1,13 +1,14 @@
 import styles from "./styles/nav_list.css"
 import NavItem from "./nav_item"
 
-function NavList(props) {
+function NavList({tagList, update}) {
+
 
     return (
-        <div class="nav_inner">
-			{props.tagList.map(tag => {
-                    return <NavItem tag={tag} key={tag.name}/>
-                })}
+        <div className="nav_inner">
+			{tagList.map(tag => {
+                return <NavItem update={update} tag={tag} key={tag.name}/>
+            })}
         </div>
     )
 }

@@ -6,8 +6,7 @@ export const levels = [
 
 export const institutes = [
     {name: "ИЕНиМ"},
-    {name: "ИНМиТ"},
-    {name: "ИнЭУ"},
+    {name: "ИНМТ"},
     {name: "ИнЭУ"},
     {name: "ИРИТ-РТФ"},//чемпион
     {name: "ИСА"},

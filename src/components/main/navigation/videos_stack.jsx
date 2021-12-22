@@ -1,16 +1,11 @@
 import styles from "./styles/videos_stack.css"
+import VideoItem from "./video_item"
 
-function VideosStack(props) {
+function VideosStack({videos}) {
     return (
-        <div class="videos_stack" id="video_stack">
-			{props.videos.map(video => {
-                return <iframe 
-                title={video.title}
-                className='video_element' 
-                id='video_element' 
-                src={video.player} 
-                frameborder="0" 
-                allowfullscreen='allowfullscreen'></iframe>
+        <div className="videos_stack" id="video_stack">
+			{videos.map(video => {
+                return <VideoItem video={video} key={video.id}/>
             })}
         </div>
     )

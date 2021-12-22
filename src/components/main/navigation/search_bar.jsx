@@ -1,11 +1,17 @@
-import styles from "./styles/search_bar.css"
+import "./styles/search_bar.css"
 
-function SearchBar() {
+function SearchBar({update}) {
 
     return (
-        <div class="videos_search">
-            <input class="search_field" id="search_bar" name="search" placeholder="Поиск" type="search"></input>
-            <button class="search_btn" id="search_btn" type="button"></button>
+        <div className="videos_search">
+            <input 
+            className="search_field" 
+            id="search_bar" 
+            name="search" 
+            placeholder="Поиск" 
+            type="search"
+            onChange={event => update(event.target.value)}/>
+            <button className="search_btn" id="search_btn" type="button"></button>
 		</div>
     )
 }
