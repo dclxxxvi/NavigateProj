@@ -1,5 +1,5 @@
 //ссылка для получения токена
-//https://oauth.vk.com/authorize?client_id=8007992&display=page&redirect_uri=&scope=video&response_type=token&v=5.52
+//https://oauth.vk.com/authorize?client_id=8007992&display=page&redirect_uri=&scope=video,offline&response_type=token&v=5.52
 //
 //
 //
@@ -44,7 +44,7 @@ import $ from 'jquery';
 function getUrl(method, params) {
 	if (!method) throw new Error('Invalid method');
 	params = params || {};
-	params['access_token'] = '46c36bf2aae5f27cb01f4c0373887d1780d37d488f5631200252a5ad29089b568d0a5a0d9dd9271f8547d';
+	params['access_token'] = '922a5b0696184ce96eb933e00d21a7343147f0d451719bf5a2be7bfcc243190cfc54b8a706fa1249b9583';
 	return "https://api.vk.com/method/" + method + "?" + $.param(params);
 }
 
