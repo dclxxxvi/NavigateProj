@@ -6,9 +6,9 @@
 
 .urfu_logo
 {
-	width: 200px;
-	height: 100px;
-	background-image: url(./urfulogo.png);
+	width: 470px;
+	height: 90px;
+	background-image: url(./logo.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -19,15 +19,57 @@
 {
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 10px;
+	font-size: 19px;
 	color: #000000;
+	justify-content: center;
 }
 
 .lk{
-	position: right;
 	width: 170px;
 	height: 32px;
+	font-size: 16px;
 	background-color: #FF009C;
+	padding: 0px;
+	color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 32px;
+}
+
+.par{
+	position: absolute;
+	  width: 370px;
+	  height: 90px;
+	-webkit-transform: skew(-20deg);
+	  -moz-transform: skew(-20deg);
+	  -o-transform: skew(-20deg);
+	  background-color: #FFCF00;
+	z-index: 1;
+  }
+  
+  .para{
+	margin-left: 255px;
+  }
+
+  .text{
+	position: absolute;
+	  width: 370px;
+	  height: 90px;
+  
+	text-align: center;
+	vertical-align: middle;
+	line-height: 90px;
+	font-size: 40px;
+	font-weight: bold;
+	z-index: 2;
+  }
+
+.header__pic_abi{
+	width: 90%;
+	height: 230px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-image: url(./abi.png);
 }
 
 .nav
