@@ -16,7 +16,7 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
         setPage,
         totalPages,
       } = usePagination({
-        contentPerPage: 12,
+        contentPerPage: 12,/*при изменении этого, также измени в if (videos.length <= 12) */
         count: videos.length,
     });
 
@@ -29,6 +29,46 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
             <h1>Видео не найдены или начните поиск</h1>
         )
     }
+    if (videos.length <= 12) {
+        return (
+            <div className="paginator">
+                <div className="videos_stack" id="video_stack">
+                    {videos
+                    .slice(firstContentIndex, lastContentIndex)
+                    .map(video => {
+                        return <VideoItem video={video} key={video.id}/>
+                    })}
+                </div>
+                <div className="pagination">
+                    
+                    <div>
+                        <button disabled className="page disabled">
+                            &#129128;
+                        </button>
+                    </div>
+                    
+
+                    <div>
+                        {[...Array(totalPages).keys()]
+                        .filter((el) => el + 1 >= page - 3 && el + 1 <= page + 3)
+                        .map((el) => (
+                            <button onclick="this.disabled=true" key={el} className="page one_page">
+                            {el + 1}
+                            </button>
+                        ))}
+                    </div>
+
+                    <div>
+                        <button className="page disabled" onclick="this.disabled=true">
+                            &#129130;
+                        </button>
+                    </div>
+
+                    
+                </div>
+            </div>
+        )
+    } 
     else {
         return (
             <div className="paginator">
