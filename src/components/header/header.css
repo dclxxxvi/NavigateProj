@@ -17,7 +17,16 @@
 
 .phone_link
 {
-	color: #214B97;
+	display: flex;
+	flex-wrap: wrap;
+	color: #000000;
+}
+
+.lk{
+	
+	width: 170px;
+	height: 35px;
+	background-color: #000000;
 }
 
 .nav
