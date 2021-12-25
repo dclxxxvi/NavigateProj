@@ -19,14 +19,15 @@
 {
 	display: flex;
 	flex-wrap: wrap;
+	font-size: 10px;
 	color: #000000;
 }
 
 .lk{
-	
+	position: right;
 	width: 170px;
-	height: 35px;
-	background-color: #000000;
+	height: 32px;
+	background-color: #FF009C;
 }
 
 .nav
