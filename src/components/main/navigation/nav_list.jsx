@@ -4,6 +4,7 @@ import NavItem from "./nav_item"
 function NavList({tagList, update}) {
 
 
+    
     return (
         <div className="nav_inner">
 			{tagList.map(tag => {

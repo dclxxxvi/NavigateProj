@@ -3,7 +3,7 @@ import usePagination from "../../../hooks/usePagination";
 import styles from "./styles/videos_stack.css"
 import VideoItem from "./video_item"
 
-function VideosStack({videos, searchQuery, tagQuery}) {
+function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
 
     const {
         firstContentIndex,
@@ -22,7 +22,7 @@ function VideosStack({videos, searchQuery, tagQuery}) {
 
     useEffect(() => {
         setPage(1);
-    }, [searchQuery, tagQuery])
+    }, [searchQuery, tagQuery, levelQuery])
 
     if (videos.length === 0) {
         return (

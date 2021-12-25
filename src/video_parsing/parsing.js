@@ -37,7 +37,6 @@
 
 
 
-
 import $ from 'jquery';
 
 
@@ -55,13 +54,11 @@ function sendRequest(offset) {
 		method: "GET",
 		dataType: "JSONP",
 		success: function(data) {
-            videos.push(...data.response.items)
+            videos.push(...data.response.items);
         }
 	});
-    return videos
+    return videos;
 }
-
-
 
 export const videos = sendRequest(0);
 
