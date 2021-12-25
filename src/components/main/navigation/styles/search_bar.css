@@ -11,9 +11,7 @@
 
 .search_btn
 {
-	border-top: 1.5px solid #214B97;
-	border-right: 1.5px solid #214B97;
-	border-bottom: 1.5px solid #214B97;
+	border: 1px solid #214B97;
 	border-left: 0px solid #214B97;
 	background-color: #9AC4FE;
 	height: 40px;
@@ -31,9 +29,7 @@
 
 .search_field
 {
-	border-top: 1.5px solid #214B97;
-	border-left: 1.5px solid #214B97;
-	border-bottom: 1.5px solid #214B97;
+	border: 1px solid #214B97;
 	border-right: 0px solid #214B97;
 	font-family: 'Arial';
 	font-size: 18px;
