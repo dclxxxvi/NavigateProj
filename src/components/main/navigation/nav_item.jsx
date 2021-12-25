@@ -8,7 +8,7 @@ function NavItem({tag, update}) {
             className="nav_btn" 
             type="radio" 
             name="tag" 
-            value={tag.name} 
+            value={tag.keywords} 
             onChange={event => update(event.target.value)}
             />
             <label className="nav_text">{tag.name}</label>

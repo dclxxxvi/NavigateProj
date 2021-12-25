@@ -14,15 +14,26 @@ function MainNavigation(props) {
 
     const filtredVideos = useMemo(() => {
         return [...videoData].filter((video) => {
-            return getVideoInfo(video).toLowerCase().includes(searchQuery.toLowerCase()) &&
-                getVideoInfo(video).toLowerCase().includes(tagQuery.toLowerCase()) &&
-                getVideoInfo(video).toLowerCase().includes(levelQuery.toLowerCase());
+            return getVideoInfo(video).includes(searchQuery.toLowerCase()) &&
+                getVideoInfo(video).includes(tagQuery.toLowerCase()) &&
+                getVideoInfo(video).includes(levelQuery.toLowerCase());
         })
     },[searchQuery, tagQuery, levelQuery, videoData])
 
     function getVideoInfo(video) {
         return (video.title + " " + video.description).toLowerCase();
     }
+
+    // function findMatches(video, query) {
+    //     let videoInfo = getVideoInfo(video);
+    //     query.split(',').forEach(element => {
+    //         if (videoInfo.includes(element.toLowerCase()))
+    //         {
+    //             return true;
+    //         }
+    //     });
+    //     return false;
+    // }
 
     return (
         <div className="container">

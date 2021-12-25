@@ -4,7 +4,6 @@ import styles from "./styles/videos_stack.css"
 import VideoItem from "./video_item"
 
 function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
-
     const {
         firstContentIndex,
         lastContentIndex,
@@ -26,7 +25,7 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
 
     if (videos.length === 0) {
         return (
-            <h1>Видео не найдены или начните поиск</h1>
+            <h1>Видео не найдены</h1>
         )
     }
     else {

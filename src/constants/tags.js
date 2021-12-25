@@ -1,29 +1,29 @@
 export const levels = [
-    {name: "Бакалавриат", className: "bakalavriat_btn"},
-    {name: "Магистратура", className: "magistratura_btn"},
-    {name: "Аспирантура", className: "aspirantura_btn"},
+    {name: "Бакалавриат", className: "bakalavriat_btn", keywords: "бакалавр"},
+    {name: "Магистратура", className: "magistratura_btn", keywords: "магистр"},
+    {name: "Аспирантура", className: "aspirantura_btn", keywords: "аспирант"},
 ]
 
 export const institutes = [
-    {name: "ИЕНиМ"},
-    {name: "ИНМТ"},
-    {name: "ИнЭУ"},
-    {name: "ИРИТ-РТФ"},//чемпион
-    {name: "ИСА"},
-    {name: "ИТОО"},
-    {name: "ИФКСиМП"},
-    {name: "УГИ"},
-    {name: "УралЭНИН"},
-    {name: "ФТИ"},
-    {name: "ХТИ"},
-    {name: "ВУЦ"},
+    {name: "ИЕНиМ", keywords: "иеним"},
+    {name: "ИНМТ", keywords: "инмт"},
+    {name: "ИнЭУ", keywords: "иеним"},
+    {name: "ИРИТ-РТФ", keywords: "ртф"},//чемпион
+    {name: "ИСА", keywords: "строит"},
+    {name: "ИТОО", keywords: "итоо"},
+    {name: "ИФКСиМП", keywords: "физическ"},
+    {name: "УГИ", keywords: "уги"},
+    {name: "УралЭНИН", keywords: "энин"},
+    {name: "ФТИ", keywords: "физик"},
+    {name: "ХТИ", keywords: "хими"},
+    {name: "ВУЦ", keywords: "военн"},
 ]
 
 export const extra = [
-    {name: "ИОТ"},
-    {name: "Программы обучения"},
-    {name: "Зачисление"},
-    {name: "Дни открытых дверей"},
-    {name: "Сериал \"Прием, УрФУ!\""},
-    {name: "Другое"},
+    {name: "ИОТ", keywords: "индивидуальн"},
+    {name: "Программы обучения", keywords: "программы"},
+    {name: "Зачисление", keywords: "поступлени"},
+    {name: "Дни открытых дверей", keywords: "дни открытых"},
+    {name: "Сериал \"Прием, УрФУ!\"", keywords: "серия"},
+    {name: "Другое", keywords: " "},
 ]

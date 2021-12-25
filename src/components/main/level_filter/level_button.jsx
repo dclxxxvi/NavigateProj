@@ -8,7 +8,7 @@ function LevelButton({level, update}) {
             id={level.className} 
             type='radio' 
             name="level"
-            value={level.name} 
+            value={level.keywords} 
             onChange={event => update(event.target.value)}
              />
 			<div className="btn_text">{level.name}</div>
