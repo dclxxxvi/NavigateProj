@@ -48,10 +48,10 @@ function getUrl(method, params) {
 	return "https://api.vk.com/method/" + method + "?" + $.param(params);
 }
 
-function sendRequest() {
+function sendRequest(offset) {
     let videos = [];
 	$.ajax({
-		url: getUrl('video.get', {v: 5.81, owner_id: -22301031, count: 20}),
+		url: getUrl('video.get', {v: 5.81, owner_id: -22301031, offset: offset, count: 200}),
 		method: "GET",
 		dataType: "JSONP",
 		success: function(data) {
@@ -61,5 +61,7 @@ function sendRequest() {
     return videos
 }
 
-export const videos = sendRequest();
+
+
+export const videos = sendRequest(0);
 
