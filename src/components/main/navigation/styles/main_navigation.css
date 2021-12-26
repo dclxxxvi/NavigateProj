@@ -2,7 +2,7 @@
 {
 	display: flex;
 	margin: auto;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: flex-start;
 }
 
@@ -15,11 +15,11 @@
 
 .videos_nav
 {
+	margin: 0 16px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-
 	flex-basis: 75%;
 }
 

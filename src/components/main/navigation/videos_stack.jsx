@@ -15,7 +15,7 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
         setPage,
         totalPages,
       } = usePagination({
-        contentPerPage: 12,/*при изменении этого, также измени в if (videos.length <= 12) */
+        contentPerPage: 12,
         count: videos.length,
     });
 
@@ -28,7 +28,7 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
             <h1>Видео не найдены</h1>
         )
     }
-    if (videos.length <= 12) {
+    if (totalPages <= 7) {
         return (
             <div className="paginator">
                 <div className="videos_stack" id="video_stack">
@@ -39,31 +39,29 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
                     })}
                 </div>
                 <div className="pagination">
-                    
                     <div>
-                        <button disabled className="page disabled">
+                        <button className="page disabled" onClick={prevPage}>
                             &#129128;
                         </button>
                     </div>
-                    
 
                     <div>
                         {[...Array(totalPages).keys()]
-                        .filter((el) => el + 1 >= page - 3 && el + 1 <= page + 3)
                         .map((el) => (
-                            <button onclick="this.disabled=true" key={el} className="page one_page">
-                            {el + 1}
+                            <button 
+                            onClick={() => setPage(el + 1)}
+                            key={el} 
+                            className={`page ${page === el + 1 ? "active" : ""}`}
+                            >{el + 1}
                             </button>
                         ))}
                     </div>
 
                     <div>
-                        <button className="page disabled" onclick="this.disabled=true">
+                        <button className="page disabled" onClick={nextPage}>
                             &#129130;
                         </button>
                     </div>
-
-                    
                 </div>
             </div>
         )
@@ -96,8 +94,7 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
                             onClick={() => setPage(el + 1)}
                             key={el}
                             className={`page ${page === el + 1 ? "active" : ""}`}
-                            >
-                            {el + 1}
+                            >{el + 1}
                             </button>
                         ))}
                     </div>

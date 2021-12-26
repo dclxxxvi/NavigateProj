@@ -1,21 +1,36 @@
-.video_element
-{
-	width: 280px;
-	height: 157.5px;
+.video_expander {
+	width: calc(100% / 3 - 12px);
+	min-width: 250px;
 	margin: 6px;
 	border-radius: 5px;
 }
 
+.video_element
+{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%;
+	border-radius: 5px;
+}
+
 .video_element iframe {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	width: 100%;
 	height: 100%;
 	border-radius: 5px;
 }
 
 .video_gradient {
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	width: 100%;
+	height: 100%;
 	border-radius: 5px;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.1) 80%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, .1) 70%);
 }
 
 .video_title {

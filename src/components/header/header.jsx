@@ -17,14 +17,11 @@ function Header() {
                     
                 </nav>
             </div>
-
             <div class="para">
                 <div class="text">Абитуриент</div>
                 <div class="par"></div>
             </div>
-
             <div className="header__pic_abi"></div>
-
         </header>
     )
 }

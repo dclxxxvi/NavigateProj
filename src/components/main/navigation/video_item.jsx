@@ -20,21 +20,25 @@ function VideoItem({video}) {
 
     if (isClicked) {
         return (
-            <div className='video_element' >
-                <iframe 
-                title={video.title}
-                id='video_element' 
-                src={video.player + "&autoplay=1"} //??? при autoplay=1 видео сразу начинает проигрываться но без звука
-                frameBorder="0"
-                allowFullScreen='allowfullscreen'></iframe>
+            <div className="video_expander">
+                <div className='video_element' >
+                    <iframe 
+                    title={video.title}
+                    id='video_element' 
+                    src={video.player + "&autoplay=1"} //??? при autoplay=1 видео сразу начинает проигрываться но без звука
+                    frameBorder="0"
+                    allowFullScreen='allowfullscreen'></iframe>
+                </div>
             </div>
         )
     }
     else {
         return (
-            <div className="video_element" style={videoBackground} onClick={rerenderVideo}>
-                <div className="video_gradient">
-                    <div className="video_title">{video.title}</div>
+            <div className="video_expander">
+                <div className="video_element" style={videoBackground} onClick={rerenderVideo}>
+                    <div className="video_gradient">
+                        <div className="video_title">{video.title}</div>
+                    </div>
                 </div>
             </div>
         )

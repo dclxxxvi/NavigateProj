@@ -4,17 +4,13 @@
 
 .videos_stack
 {
+	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	flex-direction: row;
+	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
 	flex-wrap: wrap;
-	width: 100%;
-	background-color: #ffffff;
-}
-
-.videos_stack:nth-child(-n + 2) {
-	justify-content: flex-start;
 }
 
 .pagination {
@@ -34,7 +30,7 @@
     float: left;
     text-decoration: none;
     transition: background-color .3s;
-    border: 1px solid rgb(177, 202, 216);
+    border: 1px solid rgb(218, 218, 218);
 	font-size: 18px;
 	cursor: pointer;	
 }

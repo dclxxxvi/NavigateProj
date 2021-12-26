@@ -53,9 +53,8 @@
 
   .text{
 	position: absolute;
-	  width: 370px;
-	  height: 90px;
-  
+	width: 370px;
+	height: 90px;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 90px;
@@ -67,8 +66,7 @@
 .header__pic_abi{
 	width: 90%;
 	height: 230px;
-	margin: 0 auto;
-	margin-top: 20px;
+	margin: 10px auto;
 	background-image: url(./abi.png);
 }
 
