@@ -14,6 +14,8 @@ const pool = mysql.createPool({
     password: "t1qDAR4HgS"
 });
 
+
+
 app.get("/", function(req, res){
     pool.query("SELECT * FROM user", function(err, data) {
         res.json({
