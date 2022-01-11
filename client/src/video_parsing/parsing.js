@@ -43,7 +43,7 @@ import $ from 'jquery';
 function getUrl(method, params) {
 	if (!method) throw new Error('Invalid method');
 	params = params || {};
-	params['access_token'] = '922a5b0696184ce96eb933e00d21a7343147f0d451719bf5a2be7bfcc243190cfc54b8a706fa1249b9583';
+	params['access_token'] = 'ccaab135891789d47a60933d88f6456ea89b8175f6da857c365e779c2c93fc000a4d60ab305039284b949';
 	return "https://api.vk.com/method/" + method + "?" + $.param(params);
 }
 
