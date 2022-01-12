@@ -6,8 +6,8 @@ export const levels = [
 
 export const institutes = [
     {name: "ИЕНиМ", keywords: "иеним"},
-    {name: "ИНМТ", keywords: "инмт"},
-    {name: "ИнЭУ", keywords: "иеним"},
+    {name: "ИНМТ", keywords: "инм"},
+    {name: "ИнЭУ", keywords: "инэу"},
     {name: "ИРИТ-РТФ", keywords: "ртф"},//чемпион
     {name: "ИСА", keywords: "строит"},
     {name: "ИТОО", keywords: "итоо"},

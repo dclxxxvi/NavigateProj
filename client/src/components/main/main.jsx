@@ -20,6 +20,22 @@ function Main() {
         return getUrl('video.get', {v: 5.81, owner_id: -22301031, offset: offset, count: 200})
     }
 
+    async function getVideoArr(count) {
+        let videos = [];
+        for (let i = 0; i < Math.ceil(count / 200) ; i++)
+        {
+            await $.ajax({
+                url: getOffsetUrl(i * 200),
+                method: "GET",
+                dataType: "JSONP",
+                success: function(d) {
+                    videos.push(...d.response.items);
+                }
+            });
+        }
+        return videos;
+    }
+
     useEffect(() => {
         $.ajax({
             url: getOffsetUrl(0),
@@ -30,20 +46,8 @@ function Main() {
                     console.log(data.error);
                     return;
                 }
-                let videos = [];
-                for (let i = 0; i < Math.ceil(data.response.count / 200) ; i++)
-                {
-                    $.ajax({
-                        url: getOffsetUrl(i * 200),
-                        method: "GET",
-                        dataType: "JSONP",
-                        success: function(d) {
-                            videos.push(...d.response.items);
-                        }
-                    });
-                }
-                console.log(videos);
-                setVideoData(videos);
+                getVideoArr(data.response.count)
+                .then((videos) => setVideoData(videos.sort((a,b) => b.date - a.date)));
             }
         });
     }, [])
@@ -55,6 +59,7 @@ function Main() {
             extra={tags.extra} 
             levels={tags.levels}
             videos={videoData}
+            update={setVideoData}
             />
         </div>
     )

@@ -5,6 +5,10 @@ import VideosStack from "./videos_stack"
 import LevelFilter from "../level_filter/level_filter"
 import { useMemo, useState } from "react"
 
+function getVideoInfo(video) {
+    return (video.title + " " + video.description).toLowerCase();
+}
+
 
 function MainNavigation(props) {
     const [tagQuery, setTagQuery] = useState("");
@@ -17,11 +21,7 @@ function MainNavigation(props) {
                 getVideoInfo(video).includes(tagQuery.toLowerCase()) &&
                 getVideoInfo(video).includes(levelQuery.toLowerCase());
         })
-    },[searchQuery, tagQuery, levelQuery, props.videos])
-
-    function getVideoInfo(video) {
-        return (video.title + " " + video.description).toLowerCase();
-    }
+    }, [searchQuery, tagQuery, levelQuery])
 
     // function findMatches(video, query) {
     //     let videoInfo = getVideoInfo(video);
