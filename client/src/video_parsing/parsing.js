@@ -1,8 +1,4 @@
-//ссылка для получения токена
-//https://oauth.vk.com/authorize?client_id=8007992&display=page&redirect_uri=&scope=video,offline&response_type=token&v=5.52
-//
-//
-//
+//https://oauth.vk.com/authorize?client_id=8048796&display=page&redirect_uri=&scope=video,offline&response_type=token&v=5.52
 //video object example:
 // {
 //     "adding_date": 1616149898,
@@ -34,31 +30,3 @@
 //     "player": "https://vk.com/video_ext.php?oid=-22301031&id=456239369&hash=e4fb4df7636e6f5b&__ref=vk.api&api_hash=1637893102f966ce29ca446195b7_GEYDONZRGI4TONQ",
 //     "views": 6136
 // }
-
-
-
-import $ from 'jquery';
-
-
-function getUrl(method, params) {
-	if (!method) throw new Error('Invalid method');
-	params = params || {};
-	params['access_token'] = 'ccaab135891789d47a60933d88f6456ea89b8175f6da857c365e779c2c93fc000a4d60ab305039284b949';
-	return "https://api.vk.com/method/" + method + "?" + $.param(params);
-}
-
-function sendRequest(offset) {
-    let videos = [];
-	$.ajax({
-		url: getUrl('video.get', {v: 5.81, owner_id: -22301031, offset: offset, count: 200}),
-		method: "GET",
-		dataType: "JSONP",
-		success: function(data) {
-            videos.push(...data.response.items);
-        }
-	});
-    return videos;
-}
-
-export const videos = sendRequest(0);
-

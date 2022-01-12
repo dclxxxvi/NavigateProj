@@ -3,22 +3,21 @@ import NavList from "./nav_list"
 import SearchBar from "./search_bar"
 import VideosStack from "./videos_stack"
 import LevelFilter from "../level_filter/level_filter"
-import { useEffect, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 
 
 function MainNavigation(props) {
-    const [videoData, setVideoData] = useState(props.videos);
     const [tagQuery, setTagQuery] = useState("");
     const [searchQuery, setSearchQuery] = useState("");
     const [levelQuery, setLevelQuery] = useState("");
 
     const filtredVideos = useMemo(() => {
-        return [...videoData].filter((video) => {
+        return [...props.videos].filter((video) => {
             return getVideoInfo(video).includes(searchQuery.toLowerCase()) &&
                 getVideoInfo(video).includes(tagQuery.toLowerCase()) &&
                 getVideoInfo(video).includes(levelQuery.toLowerCase());
         })
-    },[searchQuery, tagQuery, levelQuery, videoData])
+    },[searchQuery, tagQuery, levelQuery, props.videos])
 
     function getVideoInfo(video) {
         return (video.title + " " + video.description).toLowerCase();
