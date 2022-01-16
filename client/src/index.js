@@ -1,11 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
+import React, {createContext} from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
+import VideoStore from "./store/VideoStore";
+
+
+
+export const Context = createContext(null)
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Context.Provider value={{
+    video: new VideoStore()
+  }}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Context.Provider>,
+document.getElementById('root')
 );
