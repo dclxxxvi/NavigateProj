@@ -1,4 +1,4 @@
-import styles from "./styles/nav_list.css"
+import "./styles/nav_list.css"
 import NavItem from "./nav_item"
 
 function NavList({tagList, update}) {

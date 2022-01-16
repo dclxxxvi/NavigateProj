@@ -1,4 +1,4 @@
-import styles from "./styles/nav_item.css"
+import "./styles/nav_item.css"
 
 function NavItem({tag, update}) {
     

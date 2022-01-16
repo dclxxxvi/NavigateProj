@@ -1,6 +1,6 @@
 import { useEffect } from "react/cjs/react.development";
 import usePagination from "../../../hooks/usePagination";
-import styles from "./styles/videos_stack.css"
+import "./styles/videos_stack.css"
 import VideoItem from "./video_item"
 
 function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
@@ -23,12 +23,17 @@ function VideosStack({videos, searchQuery, tagQuery, levelQuery}) {
         setPage(1);
     }, [searchQuery, tagQuery, levelQuery])
 
+    //Если массив видео пустой
     if (videos.length === 0) {
         return (
-            <h1>Видео не найдены</h1>
+            <div>
+                <h1>Видео не найдены</h1>
+                <h2>Попробуйте изменить запрос</h2>
+            </div>
         )
     }
-    if (totalPages <= 7) {
+    //Если страниц меньше либо равно 7, то не рендерятся кнопки первой и последней страницы
+    else if (totalPages <= 7) {
         return (
             <div className="paginator">
                 <div className="videos_stack" id="video_stack">

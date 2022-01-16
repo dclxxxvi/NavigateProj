@@ -1,4 +1,4 @@
-import styles from './main.css'
+import './main.css'
 import * as tags from '../../constants/tags'
 import MainNavigation from './navigation/main_navigation'
 import $ from 'jquery'
@@ -16,16 +16,16 @@ function Main() {
         return "https://api.vk.com/method/" + method + "?" + $.param(params);
     }
 
-    function getOffsetUrl(offset) {
+    function getVideoUrl(offset) {
         return getUrl('video.get', {v: 5.81, owner_id: -22301031, offset: offset, count: 200})
     }
 
-    async function getVideoArr(count) {
+    async function getVideosFromAPI(count) {
         let videos = [];
         for (let i = 0; i < Math.ceil(count / 200) ; i++)
         {
             await $.ajax({
-                url: getOffsetUrl(i * 200),
+                url: getVideoUrl(i * 200),
                 method: "GET",
                 dataType: "JSONP",
                 success: function(d) {
@@ -38,7 +38,7 @@ function Main() {
 
     useEffect(() => {
         $.ajax({
-            url: getOffsetUrl(0),
+            url: getVideoUrl(0),
             method: "GET",
             dataType: "JSONP",
             success: function(data) {
@@ -46,7 +46,7 @@ function Main() {
                     console.log(data.error);
                     return;
                 }
-                getVideoArr(data.response.count)
+                getVideosFromAPI(data.response.count)
                 .then((videos) => setVideoData(videos.sort((a,b) => b.date - a.date)));
             }
         });

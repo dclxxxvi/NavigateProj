@@ -1,4 +1,4 @@
-import styles from './styles/level_filter.css'
+import './styles/level_filter.css'
 import LevelButton from './level_button'
 
 function LevelFilter(props) {

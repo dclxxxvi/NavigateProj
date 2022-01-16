@@ -1,4 +1,4 @@
-import styles from './styles/level_button.css'
+import './styles/level_button.css'
 
 
 function LevelButton({level, update}) {

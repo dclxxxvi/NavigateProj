@@ -1,6 +1,5 @@
-import { render } from "@testing-library/react"
-import { useState, useEffect } from "react/cjs/react.development"
-import styles from "./styles/video_item.css"
+import { useState } from "react/cjs/react.development"
+import "./styles/video_item.css"
 
 function VideoItem({video}) {
 

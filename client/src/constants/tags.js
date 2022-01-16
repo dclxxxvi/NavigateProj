@@ -25,5 +25,5 @@ export const extra = [
     {name: "Зачисление", keywords: "поступлени"},
     {name: "Дни открытых дверей", keywords: "дни открытых"},
     {name: "Сериал \"Прием, УрФУ!\"", keywords: "серия"},
-    {name: "Другое", keywords: " "},
+    {name: "Другое", keywords: ""},
 ]

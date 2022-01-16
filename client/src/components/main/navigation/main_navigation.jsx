@@ -1,4 +1,4 @@
-import styles from "./styles/main_navigation.css"
+import "./styles/main_navigation.css"
 import NavList from "./nav_list"
 import SearchBar from "./search_bar"
 import VideosStack from "./videos_stack"
@@ -9,8 +9,18 @@ function getVideoInfo(video) {
     return (video.title + " " + video.description).toLowerCase();
 }
 
+// TODO: Функция поиска по нескольким ключевым словам
+// function findMatches(video, query) {
+//     let videoInfo = getVideoInfo(video);
+//     query.split(',').forEach(k => {
+//         if (videoInfo.includes(k.toLowerCase()))
+//             return true;
+//     });
+//     return false;
+// }
 
 function MainNavigation(props) {
+
     const [tagQuery, setTagQuery] = useState("");
     const [searchQuery, setSearchQuery] = useState("");
     const [levelQuery, setLevelQuery] = useState("");
@@ -21,18 +31,7 @@ function MainNavigation(props) {
                 getVideoInfo(video).includes(tagQuery.toLowerCase()) &&
                 getVideoInfo(video).includes(levelQuery.toLowerCase());
         })
-    }, [searchQuery, tagQuery, levelQuery])
-
-    // function findMatches(video, query) {
-    //     let videoInfo = getVideoInfo(video);
-    //     query.split(',').forEach(element => {
-    //         if (videoInfo.includes(element.toLowerCase()))
-    //         {
-    //             return true;
-    //         }
-    //     });
-    //     return false;
-    // }
+    }, [searchQuery, tagQuery, levelQuery, props.videos])
 
     return (
         <div className="container">
